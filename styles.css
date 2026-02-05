@@ -352,3 +352,13 @@ figcaption{ color: var(--subtext); font-size: 14px; }
   color: var(--text);
   outline: none;
 }
+.error {
+  min-height: 16px;
+  font-size: 12px;
+  color: #ffb4b4;
+}
+
+.field input.input-error {
+  border-color: rgba(255, 120, 120, 0.6);
+}
+
