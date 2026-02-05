@@ -22,7 +22,7 @@
         <a href="#pricing">Pricing</a>
       </nav>
 
-      <a class="btn btn-primary" href="#pricing">Get Started</a>
+      <button class="btn btn-primary" id="open-cta">Get Started</button>
     </div>
   </header>
 
@@ -235,6 +235,35 @@
       </div>
     </div>
   </footer>
+<!-- CTA MODAL -->
+<div class="modal" id="cta-modal" aria-hidden="true">
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-head">
+      <h2 id="modal-title">Get started with LumaSip</h2>
+      <button class="icon-btn" id="close-modal" aria-label="Close modal">✕</button>
+    </div>
+
+    <p class="modal-sub">Drop your info and we’ll send you a starter brew guide (demo).</p>
+
+    <form id="cta-form">
+      <label class="field">
+        <span>Name</span>
+        <input type="text" id="name" name="name" placeholder="Your name" />
+          <small class="error" id="name-error"></small>
+      </label>
+
+      <label class="field">
+        <span>Email</span>
+        <input type="email" id="email" name="email" placeholder="you@example.com" />
+          <small class="error" id="email-error"></small>
+      </label>
+
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
 
   <script src="app.js"></script>
 </body>

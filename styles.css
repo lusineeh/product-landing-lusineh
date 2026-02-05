@@ -13,7 +13,7 @@
 }
 
 *{ box-sizing: border-box; }
-html{ scroll-behavior: auto; } /* branch A will enable smooth scroll */
+html{ scroll-behavior: smooth; } /* branch A will enable smooth scroll */
 body{
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
@@ -72,6 +72,12 @@ a:hover{ opacity: 0.9; }
   border-radius: 999px;
 }
 .nav a:hover{ background: rgba(255,255,255,0.06); color: var(--text); }
+
+.nav a.active {
+  background: rgba(124,92,255,0.25);
+  color: var(--text);
+}
+
 
 .btn{
   border: 1px solid var(--line);
@@ -275,3 +281,84 @@ figcaption{ color: var(--subtext); font-size: 14px; }
   .testimonials{ grid-template-columns: repeat(2, 1fr); }
   .pricing{ grid-template-columns: repeat(3, 1fr); }
 }
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 50;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-panel {
+  position: relative;
+  width: min(520px, calc(100% - 32px));
+  margin: 12vh auto 0;
+  border: 1px solid var(--line);
+  background: rgba(17,24,35,0.92);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.modal-sub {
+  margin: 8px 0 14px;
+  color: var(--subtext);
+}
+
+.icon-btn {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.field span {
+  color: var(--subtext);
+  font-size: 14px;
+}
+
+.field input {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(0,0,0,0.20);
+  color: var(--text);
+  outline: none;
+}
+.error {
+  min-height: 16px;
+  font-size: 12px;
+  color: #ffb4b4;
+}
+
+.field input.input-error {
+  border-color: rgba(255, 120, 120, 0.6);
+}
+
