@@ -1,12 +1,28 @@
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-const heroCta = document.getElementById("hero-cta");
-if (heroCta) {
-  heroCta.addEventListener("click", () => {
-    document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
-  });
+// CTA modal (Phase 2: open + close button)
+const modal = document.getElementById("cta-modal");
+const openHeaderCta = document.getElementById("open-cta");
+const openHeroCta = document.getElementById("hero-cta");
+const closeBtn = document.getElementById("close-modal");
+
+function openModal() {
+  if (!modal) return;
+  modal.classList.add("show");
+  modal.setAttribute("aria-hidden", "false");
 }
+
+function closeModal() {
+  if (!modal) return;
+  modal.classList.remove("show");
+  modal.setAttribute("aria-hidden", "true");
+}
+
+openHeaderCta?.addEventListener("click", openModal);
+openHeroCta?.addEventListener("click", openModal);
+closeBtn?.addEventListener("click", closeModal);
+
 
 document.querySelectorAll("[data-plan]").forEach((btn) => {
   btn.addEventListener("click", () => {
