@@ -111,6 +111,32 @@
         </div>
       </div>
     </section>
+    <!-- PRODUCT GALLERY -->
+<section id="gallery" class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Our coffee</h2>
+      <p>Explore our different coffees.</p>
+    </div>
+
+    <div class="gallery-filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="recipes">Recipes</button>
+  <button class="filter-btn" data-filter="ingredients">Ingredients</button>
+  <button class="filter-btn" data-filter="specialty">Specialty coffee</button>
+</div>
+
+<div class="gallery-grid">
+  <img src="assets/gallery/image1.jpg" data-category="recipes" alt="Recipe 1" />
+  <img src="assets/gallery/image2.jpg" data-category="recipes" alt="Recipe 2" />
+  <img src="assets/gallery/image3.jpg" data-category="ingredients" alt="Ingredients 1" />
+  <img src="assets/gallery/image4.jpg" data-category="ingredients" alt="Ingredients 2" />
+  <img src="assets/gallery/image5.jpg" data-category="specialty" alt="Specialty coffee 1" />
+  <img src="assets/gallery/image6.jpg" data-category="specialty" alt="Specialty coffee 2" />
+</div>
+
+</section>
+
 
     <!-- BENEFITS -->
     <section id="benefits" class="section section-muted">
@@ -237,5 +263,15 @@
   </footer>
 
   <script src="app.js"></script>
+  <div class="lightbox" id="lightbox">
+  <div class="lightbox-backdrop"></div>
+  <div class="lightbox-content">
+    <button class="lightbox-close">✕</button>
+    <button class="lightbox-prev">‹</button>
+    <img id="lightbox-img" alt="Gallery preview" />
+    <button class="lightbox-next">›</button>
+  </div>
+</div>
+
 </body>
 </html>

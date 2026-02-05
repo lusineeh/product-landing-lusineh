@@ -275,3 +275,37 @@ figcaption{ color: var(--subtext); font-size: 14px; }
   .testimonials{ grid-template-columns: repeat(2, 1fr); }
   .pricing{ grid-template-columns: repeat(3, 1fr); }
 }
+/* GALLERY */
+.gallery-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.04);
+  color: var(--subtext);
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: rgba(124,92,255,0.25);
+  color: var(--text);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 14px;
+  cursor: pointer;
+  border: 1px solid var(--line);
+}
