@@ -14,3 +14,26 @@ document.querySelectorAll("[data-plan]").forEach((btn) => {
     alert(`Selected plan: ${plan} (demo)`);
   });
 });
+// Active section highlight in navbar
+const sections = document.querySelectorAll("main section[id]");
+const navLinks = document.querySelectorAll(".nav a");
+
+function setActiveLink() {
+  let currentSection = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+    if (window.scrollY >= sectionTop) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${currentSection}`) {
+      link.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", setActiveLink);

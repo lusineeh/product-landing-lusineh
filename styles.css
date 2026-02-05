@@ -13,7 +13,7 @@
 }
 
 *{ box-sizing: border-box; }
-html{ scroll-behavior: auto; } /* branch A will enable smooth scroll */
+html{ scroll-behavior: smooth; } /* branch A will enable smooth scroll */
 body{
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
@@ -72,6 +72,12 @@ a:hover{ opacity: 0.9; }
   border-radius: 999px;
 }
 .nav a:hover{ background: rgba(255,255,255,0.06); color: var(--text); }
+
+.nav a.active {
+  background: rgba(124,92,255,0.25);
+  color: var(--text);
+}
+
 
 .btn{
   border: 1px solid var(--line);
